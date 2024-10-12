@@ -20,5 +20,11 @@ function rollDice() {
   }
 }
 
-// Add event listener to the button to roll the dice when clicked
-document.getElementById("rollButton").addEventListener("click", rollDice);
+// Update the header and start the game when the button is clicked
+document.getElementById("rollButton").addEventListener("click", function() {
+  // Change the header text on the first click
+  document.querySelector("h1").innerHTML = "Refresh Me";
+  
+  // Roll the dice when the button is clicked
+  rollDice();
+});
